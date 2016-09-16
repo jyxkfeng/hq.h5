@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+    <meta http-equiv="expires" content="0">
+		<title>道具搜索</title>
+		<link rel="stylesheet" href="/css/bootstrap.min.css">
+		<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+		<link rel="stylesheet" href="/css/bootstrap-theme.min.css">	
+		<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+		<script src="/js/jquery1.9.1.min.js"></script>		
+		<link rel="stylesheet" href="/css/layout.css" />
+		<link rel="stylesheet" href="/css/style.css" />
+	
+	</head>
+	<body>
+		<div class="warp">
+			<!--searchBox-->
+			<div class="searchBox clearfix">
+				<div class="searchOption"><span id="spn_hlry">道具租赁</span><i id="ico_jj" class="ico_jj"></i>
+					<ul id="ul_xiala" style="display:none">
+						<div class="ico_tp_jiao"></div>
+						<li>道具租赁</li><li>婚礼人员</li><li>搭建团队</li>
+					</ul>
+				</div>
+				<input class="searchInput" value=""  />
+                <a href="daoju_search2.html">
+                    <div class="btn_search">搜索</div>
+                </a>
+			</div>
+			<!--searchBox-->
+
+            <!--热门搜索-->
+            <div class="hirstory_searchBox">
+                <p class="clearfix"><i class="ico_history"></i>最近类别</p>
+                <div class="search_item2 zjss">
+                    <a href="daoju_search2.html">
+                        <span>分类道具1</span>
+                    </a>
+                    <a href="daoju_search2.html">
+                        <span>分类道具2</span>
+                    </a>
+                    <a href="daoju_search2.html">
+                        <span>分类道具3</span>
+                    </a>
+                    <a href="daoju_search2.html">
+                        <span>分类道具4</span>
+                    </a>
+                    <a href="daoju_search2.html">
+                        <span>分类道具5</span>
+                    </a>
+                </div>
+            </div>
+			
+			<div class="clearfix"></div>
+			
+			<!--热门搜索-->
+			<div class="hirstory_searchBox">
+				<p class="clearfix"><i class="ico_history"></i>所有分类</p>
+				<div class="search_item2 syfl">
+                    <a href="daoju_search2.html">
+                        <span>分类道具1</span>
+                    </a>
+                    <a href="daoju_search2.html">
+                        <span>分类道具2</span>
+                    </a>
+                    <a href="daoju_search2.html">
+                        <span>分类道具3</span>
+                    </a>
+                    <a href="daoju_search2.html">
+                        <span>分类道具4</span>
+                    </a>
+                    <a href="daoju_search2.html">
+                        <span>分类道具5</span>
+                    </a>
+                    <a href="daoju_search2.html">
+                        <span>分类道具6</span>
+                    </a>
+                    <a href="daoju_search2.html">
+                        <span>分类道具7</span>
+                    </a>
+                    <a href="daoju_search2.html">
+                        <span>分类道具8</span>
+                    </a>
+				</div>
+			</div>
+			
+		</div>
+        <div class="mask"></div>
+		<script type="text/javascript">
+            $(function () {
+                $(".ico_jj").click(function () {
+                    $("#ul_xiala").toggle();
+                });
+
+                $("#spn_hlry").click(function () {
+                    $("#ul_xiala").toggle();
+                })
+
+                $("#ul_xiala li").click(function () {
+                    $("#spn_hlry").text($(this).text());
+                    $("#ul_xiala").hide();
+                })
+
+                $('.searchInput').blur(function () {
+                    $('.mask').hide();
+                })
+                $('.searchInput').focus(function () {
+                    $('.mask').show();
+                })
+            })
+        </script>
+	</body>
+</html>
